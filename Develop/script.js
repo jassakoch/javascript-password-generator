@@ -17,15 +17,20 @@ generateBtn.addEventListener("click", writePassword);
 //loop for limiting charaters
 
 
-//choosing a number of the characters
+//promt for choosing a number of the characters
 var passwordLength = window.prompt("Choose a length between 8 and 128.");
 
-if (passwordLength <8 ||passwordLength >128); {
+//choice of password length
+if (!passwordLength >=8 || !passwordLength >= 128); {
   alert("You must choose a length between 8 and 128!");
-  window.open("index.htm");}
+  window.open("index.htm");
+} else { return}
 
 
+//prompt for character types, lowercase, uppcase, numeric, and/or special characters.
 
+/*
 function generatePassword(); {
 
 }
+*/
