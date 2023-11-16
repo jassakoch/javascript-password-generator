@@ -19,7 +19,11 @@ generateBtn.addEventListener("click", writePassword);
 1. Prompt 1- lenght
 2. Store length input IN A VAR
 3. Prompt 2- character types
-3. Create array OR VAR for character types?
+  a. lowercase
+  b. uppercase
+  c. numeric
+  d. special characters
+4. Create array OR VAR for character types?
 5. store character type input IN VAF
 6. one character type selected for password
 7. return password
@@ -30,15 +34,17 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   //1. Prompt 1- lenght
-  var LengthChoice = prompt("Choose a length between 8 and 128.");
-
-
-
+  var lengthChoice = prompt("Choose a length between 8 and 128.");
 
   // b.  confirming LengthChoice is between 8-128
-  if (LengthChoice < 8 || LengthChoice > 128) {
+  if (lengthChoice < 8 || lengthChoice > 128) {
     alert("You must choose a length between 8 and 128!");
     return
   }
+// prompt for their character type choice
+var CharTypeChoice = confirm("Do you want to inlcude lowercase?");
+// declaring lowercase variable
+//check if their choice is yes or no
 
+var lowerCase =  "abcdefghijklmnopqrstuvwxyz"
 }
