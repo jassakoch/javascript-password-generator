@@ -31,20 +31,14 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   //1. Prompt 1- lenght
   var LengthChoice = prompt("Choose a length between 8 and 128.");
-}
 
 
 
-/*
-  if (LengthChoice < 8 || LengthChoice > 128); {
+
+  // b.  confirming LengthChoice is between 8-128
+  if (LengthChoice < 8 || LengthChoice > 128) {
     alert("You must choose a length between 8 and 128!");
-    window.open("index.htm");
-  } 
-  else {
+    return
+  }
 
-    return LengthChoice;
 }
-
-//3. to do list character type prompt
-var characterType = window.prompt("Select at least one type of characters (lowercase, uppercase, numeric, and/or special characters");
-*/
