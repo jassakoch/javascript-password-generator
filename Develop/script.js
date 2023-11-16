@@ -19,7 +19,7 @@ generateBtn.addEventListener("click", writePassword);
 
 //promt for choosing a number of the characters
 
-var LengthChoice = prompt("Choose a length between 8 and 128.");
+// var LengthChoice = prompt("Choose a length between 8 and 128.");
 
 //choice of password length
 /*
@@ -29,15 +29,15 @@ if (!LengthChoice >=8 || !LengthChoice <= 128); {
 } else {
   return LengthChoice;
 }
-/*
+
 
 //prompt for character types, lowercase, uppcase, numeric, and/or special characters.
 
-/*
-function generatePassword(length, lowercase, uppercase, mumeric, special characters); {
 
+function generatePassword() {
+  console.log(Will I figure this out??)
 }
-*/
+
 
 if (LengthChoice < 8 || LengthChoice > 128); {
   alert("You must choose a length between 8 and 128!");
@@ -46,3 +46,17 @@ if (LengthChoice < 8 || LengthChoice > 128); {
   return LengthChoice;
   
 }
+*/
+//just tesing what this does to the website?
+function generatePassword() {
+  console.log("Will I figure this out??")
+}
+
+/*to do list for generating function:
+1. Prompt 1- lenght
+3. Store length input
+2. Prompt 2- character types
+3. Create array for character types?
+4. store character type input
+5. one character type selected
+6. return password
