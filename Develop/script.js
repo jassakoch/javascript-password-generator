@@ -31,29 +31,33 @@ generateBtn.addEventListener("click", writePassword);
 7. return password
 */
 
-//create character types arrays:
-
-// array for lowercase 
-let lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-console.log(lowerCaseArray);
-//array for uppercase
-let upperCaseArray = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-console.log(upperCaseArray);
-//array for numeric
-let numberArray = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ];
-console.log(numberArray);
-let specialArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
 
 
 
 function generatePassword() {
   //1. Prompt 1- lenght
-  var lengthChoice = prompt("Choose a length between 8 and 128.");
+  var lengthChoice = prompt("Choose a length between 8 and 128. Please enter a numeric value");
+
+// array for lowercase 
+var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+console.log(lowerCaseArray);
+//array for uppercase
+var upperCaseArray = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+console.log(upperCaseArray);
+//array for numeric
+var numberArray = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ];
+console.log(numberArray);
+var specialArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
+
 
   // b.  confirming LengthChoice is between 8-128 but keeps going back if condition is not met.
-  while (lengthChoice < 8 || lengthChoice > 128) {
-    alert("You must choose a length between 8 and 128!");
-    var lengthChoice = prompt("Choose a length between 8 and 128.");}
+  while (lengthChoice < 8 || lengthChoice > 128 ) {
+   lengthChoice = prompt("You must choose a length between 8 and 128.");
+  
+   // if (lengthChoice >=8 || lengthChoice <=128){
+   // break
+  
+}
     console.log(lengthChoice);
  
  //alert for at least one characer choice
@@ -70,11 +74,13 @@ var uppercaseConfirm = confirm("Do you want to include uppercase in your passwor
 var numericConfirm = confirm("Do you want to include numeric values in your password?");
 
 //prompt for special characters choice
-var specialConfirm = confirm("Do you want to include special characters in your password?")
+var specialConfirm = confirm("Do you want to include special characters in your password?");
 }
 
 //Need to validate if at least one of the character choices was selected. 
 //First create an array to store the confirmations then 
 //create a for loop to check the array
-
-let validationArray = [ ]
+/*
+let validationArray = [lowercaseConfirm, uppercaseConfirm, numericConfirm,specialConfirm];
+console.log(validationArray)
+*/
