@@ -23,7 +23,7 @@ n/a
 ## Usage
 ![Password_generator_Screenshot](https://github.com/jassakoch/javascript-password-generator/assets/140959169/ee19f1ec-a08a-4d39-9ab6-52fa0a0523d9)
 
-
+[Link](https://jassakoch.github.io/javascript-password-generator/)
 
     ```
 
