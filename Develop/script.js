@@ -29,6 +29,18 @@ generateBtn.addEventListener("click", writePassword);
 7. return password
 */
 
+//create character types arrays:
+
+// array for lowercase 
+let lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+console.log(lowerCaseArray);
+//array for uppercase
+let upperCaseArray = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+console.log(upperCaseArray);
+//array for numeric
+let numberArray = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ];
+console.log(numberArray);
+let specialArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
 
 
 
@@ -41,16 +53,17 @@ function generatePassword() {
     alert("You must choose a length between 8 and 128!");
     return
   }
-// prompt for their character type choice
-var charTypeChoice = confirm("Do you want to inlcude lowercase?");
-// declaring lowercase variable
-//check if their choice is yes or no
+// prompt for user lowercase choice
 
+var lowercaseConfirm = confirm("Do you want to inlcude lowercase in your password?");
 
+//prompt for uppercaseChoice
+var uppercaseConfirm = confirm("Do you want to include uppercase in your password?");
+
+//prompt for number choice
+var numericConfirm = confirm("Do you want to include numeric values in your password?");
+
+//prompt for special characters choice
+var specialConfirm = confirm("Do you want to include special characters in your password?")
 }
-//check if choice is yes?
-if (confirm (charTypeChoice))  {
-  var charTypeChoice = confirm("Do you want to inlcude lowercase?");
-  return var lowerCaseArray = 'abcdefghijklmnopqurstuvwxyz'.split
-}
-var 
+
