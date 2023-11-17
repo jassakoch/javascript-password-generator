@@ -42,9 +42,15 @@ function generatePassword() {
     return
   }
 // prompt for their character type choice
-var CharTypeChoice = confirm("Do you want to inlcude lowercase?");
+var charTypeChoice = confirm("Do you want to inlcude lowercase?");
 // declaring lowercase variable
 //check if their choice is yes or no
 
-var lowerCase =  "abcdefghijklmnopqrstuvwxyz"
+
 }
+//check if choice is yes?
+if (confirm (charTypeChoice))  {
+  var charTypeChoice = confirm("Do you want to inlcude lowercase?");
+  return var lowerCaseArray = 'abcdefghijklmnopqurstuvwxyz'.split
+}
+var 
