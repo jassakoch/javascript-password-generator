@@ -49,10 +49,11 @@ function generatePassword() {
   var lengthChoice = prompt("Choose a length between 8 and 128.");
 
   // b.  confirming LengthChoice is between 8-128
-  if (lengthChoice < 8 || lengthChoice > 128) {
+  while (lengthChoice < 8 || lengthChoice > 128) {
     alert("You must choose a length between 8 and 128!");
-    return
-  }
+    var lengthChoice = prompt("Choose a length between 8 and 128.");}
+    console.log(lengthChoice);
+  
 // prompt for user lowercase choice
 
 var lowercaseConfirm = confirm("Do you want to inlcude lowercase in your password?");
@@ -66,4 +67,3 @@ var numericConfirm = confirm("Do you want to include numeric values in your pass
 //prompt for special characters choice
 var specialConfirm = confirm("Do you want to include special characters in your password?")
 }
-
