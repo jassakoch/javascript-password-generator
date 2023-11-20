@@ -31,24 +31,25 @@ generateBtn.addEventListener("click", writePassword);
 7. return password
 */
 
-
+// array for lowercase 
+var lowercaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+console.log(lowercaseArray);
+//array for uppercase
+var uppercaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+console.log(uppercaseArray);
+//array for numeric
+var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
+console.log(numberArray);
+var specialArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
+console.log(specialArray);
 
 
 function generatePassword() {
+  //create var array for storing characters
+  var possiblePasswordArray = [];
   //1. Prompt 1- lenght
+
   var lengthChoice = prompt("Choose a length between 8 and 128. Please enter a numeric value");
-
-  // array for lowercase 
-  var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  console.log(lowerCaseArray);
-  //array for uppercase
-  var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  console.log(upperCaseArray);
-  //array for numeric
-  var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
-  console.log(numberArray);
-  var specialArray = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"]
-
 
   // b.  confirming LengthChoice is between 8-128 but keeps going back if condition is not met.
   while (lengthChoice < 8 || lengthChoice > 128) {
@@ -66,24 +67,53 @@ function generatePassword() {
   // prompt for user lowercase choice
 
   var lowercaseConfirm = confirm("Do you want to inlcude lowercase in your password?");
-
+  //adding characters to possiblePassword if confirmed
+  if (lowercaseConfirm) {
+    possiblePasswordArray = possiblePasswordArray.concat(lowercaseArray);
+  }
   //prompt for uppercaseChoice
   var uppercaseConfirm = confirm("Do you want to include uppercase in your password?");
-
+  if (uppercaseConfirm) {
+    possiblePasswordArray = possiblePasswordArray.concat(uppercaseArray);
+  }
   //prompt for number choice
-  var numericConfirm = confirm("Do you want to include numeric values in your password?");
-
+  var numberConfirm = confirm("Do you want to include numeric values in your password?");
+  if (numberConfirm) {
+    possiblePasswordArray = possiblePasswordArray.concat(numberArray);
+  }
   //prompt for special characters choice
   var specialConfirm = confirm("Do you want to include special characters in your password?");
+  if (specialConfirm) {
+    possiblePasswordArray = possiblePasswordArray.concat(specialArray);
+  }
 
-
+  console.log(possiblePasswordArray);
   //Need to validate if at least one of the character choices was selected. 
   //First create an array to store the confirmations then 
 
-  if (lowercaseConfirm || uppercaseConfirm || numericConfirm || specialConfirm) {
-    var possiblePassword;
-  } else {
-    window.alert("Please select at least ONE lowercase, or uppercase, or number or special character to include in your password")
+  if (!lowercaseConfirm && !uppercaseConfirm && !numberConfirm && !specialConfirm) {
+    window.alert("Please select at least ONE lowercase, or uppercase, or number or special character to include in your password");
     return generatePassword();
+  } else {
+    console.log(possiblePasswordArray);
+    var passwordString = '';
+
+    for (let index = 0; index < Number(lengthChoice); index++) {
+      //to do list: each time of the loop I need to grab random number, random number needs to be between and possiblecharacters`
+      //before randombly selecting character
+   
+      var randomIndex = Math.floor(Math.random() * possiblePasswordArray.length);
+      passwordString += possiblePasswordArray[randomIndex];
+      console.log(passwordString);
+      //
+
+    }
+    return passwordString;
   }
+
 }
+
+
+
+
+
